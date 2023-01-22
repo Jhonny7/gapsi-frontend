@@ -1,0 +1,8 @@
+<section class="home-page">
+  <cmpt-title-page title="Welcome page"></cmpt-title-page>
+  <cmpt-gapsi-square
+    [dataApp]="dataApi"
+    (onClose)="close($event)"
+    *ngIf="showInfo"
+  ></cmpt-gapsi-square>
+</section>

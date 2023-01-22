@@ -1,0 +1,57 @@
+<section class="provider-page">
+  <cmpt-title-page title="Lista de proveedores"></cmpt-title-page>
+
+  <cmpt-container>
+    <section class="table-data">
+      <section class="plus">
+        <div (click)="addProvider()">
+          <span class="material-icons">add</span>
+        </div>
+      </section>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Razón Social</th>
+            <th scope="col">Dirección</th>
+            <th scope="col" class="td-action"></th>
+            <th scope="col" class="td-action"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let provider of providers">
+            <td data-label="Nombre">{{ provider.name }}</td>
+            <td data-label="Apellido">{{ provider.lastName }}</td>
+            <td data-label="Razón Social">{{ provider.businessName }}</td>
+            <td data-label="Dirección">{{ provider.address }}</td>
+            <td class="td-action" data-label="Editar">
+              <span class="material-icons blue" (click)="addProvider(provider)">edit</span>
+            </td>
+
+            <td class="td-action" data-label="Eiminar" (click)="confirmDelete(provider)">
+              <span class="material-icons red">delete</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <section class="paginater">
+        <mat-paginator
+        #paginator
+        class="demo-paginator"
+        (page)="handlePageEvent($event)"
+        [length]="length"
+        [pageSize]="pageSize"
+        [disabled]="disabled"
+        [showFirstLastButtons]="showFirstLastButtons"
+        [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+        [hidePageSize]="hidePageSize"
+        [pageIndex]="pageIndex"
+        aria-label="Select page"
+      >
+      </mat-paginator>
+      </section>
+    </section>
+  </cmpt-container>
+</section>

@@ -1,0 +1,22 @@
+<!-- <section class="pages">
+  <div class="page-select">
+    <p>Paginación</p>
+    <select [(ngModel)]="limitRows" (change)="changeRows($event)">
+      <option [value]="p.value" *ngFor="let p of pageBox">{{p.label}}</option>
+    </select>
+  </div>
+
+  <section class="pg">
+    <div class="paginations">
+      <a (click)="paginarCustom(customPagination.actual - 1)" *ngIf="customPagination.prev.length > 1">&laquo;</a>
+      <ng-container *ngFor="let prev of customPagination.prev; let i = index">
+        <a (click)="paginarCustom(prev)" *ngIf="i > 0">{{ prev }}</a>
+      </ng-container>
+      <a class="active">{{ customPagination.actual }}</a>
+      <ng-container *ngFor="let next of customPagination.next; let j = index">
+        <a (click)="paginarCustom(next)">{{ next }}</a>
+      </ng-container>
+      <a (click)="paginarCustom(customPagination.actual + 1)" *ngIf="customPagination.next.length > 0">&raquo;</a>
+    </div>
+  </section>
+</section> -->

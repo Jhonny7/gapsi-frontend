@@ -1,0 +1,31 @@
+.pages {
+  text-align: end;
+
+  .page-select {
+    display: inline-block;
+    width: 49%;
+    text-align: initial;
+
+    p {
+      display: inline-block;
+      margin: 0;
+    }
+
+    select {
+      border: 1px solid #c9c9ca;
+      background: white;
+      cursor: pointer;
+      width: 60px;
+      border-radius: 4px;
+      appearance: checkbox;
+      -webkit-appearance: checkbox;
+      -moz-appearance: checkbox;
+    }
+  }
+
+  .pg {
+    display: inline-block;
+    width: 50%;
+    text-align: end;
+  }
+}

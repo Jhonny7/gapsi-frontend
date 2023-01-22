@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/animations.scss";
+
+@font-face {
+    font-family: helvetica;
+    src: url("./assets/fonts/HelveticaNeue.ttf");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: safe;
+    src: url("./assets/fonts/safe.ttf");
+    font-weight: 400;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: helvetica;
+    font-weight: 900 !important;
+}
+
+.gral-button {
+    margin: auto;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    background: #0199cb;
+    color: #fff;
+    cursor: pointer;
+    min-width: 110px;
+}
+
+.center{
+    text-align: center;
+}
+
+::ng-deep .mat-icon-button {
+    border-radius: 2px;
+    background-color: #f9f6f6;
+    border: 1px solid #bbbcbd;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent, .mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker {
+    color: #024489;
+  }

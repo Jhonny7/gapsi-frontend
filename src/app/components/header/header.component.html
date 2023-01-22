@@ -1,0 +1,22 @@
+<section class="header animated fadeInDown">
+  <section class="seccion-logo">
+    <!-- <img src="assets/svgs/logo.svg" alt="" /> -->
+    <ng-content></ng-content>
+  </section>
+
+  <section class="section-navbar-public">
+    <section>
+      <div class="inv-navbar inv-responsive" *ngFor="let itm of publicItems">
+        <div (click)="itm.action ? itm.action() : null" style="cursor: pointer;">
+          {{ itm.name }}
+        </div>
+      </div>
+
+      <div class="inv-navbar">
+        <button class="button-sn-tmp" (click)="goGit()">Repositories</button>
+      </div>
+    </section>
+  </section>
+</section>
+
+

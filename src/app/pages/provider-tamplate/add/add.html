@@ -1,0 +1,87 @@
+<section class="add" *ngIf="show">
+  <div class="container">
+    <h3 mat-dialog-title>{{provider.id ? 'Editar' : 'Agregar'}} proveedor</h3>
+
+    <form class="mat-dialog-content" (ngSubmit)="submit" #formControl="ngForm">
+      <div class="form">
+        <mat-form-field color="accent">
+          <input
+            matInput
+            #input
+            class="form-control"
+            placeholder="Nombre"
+            [(ngModel)]="provider.name"
+            name="name"
+            required
+          />
+          <mat-error *ngIf="formControl.invalid"
+            >{{getErrorMessage()}}</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="form">
+        <mat-form-field color="accent">
+          <input
+            matInput
+            #input
+            class="form-control"
+            placeholder="Apellido"
+            [(ngModel)]="provider.lastName"
+            name="lastName"
+            required
+          />
+          <mat-error *ngIf="formControl.invalid"
+            >{{getErrorMessage()}}</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="form">
+        <mat-form-field color="accent">
+          <input
+            matInput
+            #input
+            class="form-control"
+            placeholder="Razón social"
+            [(ngModel)]="provider.businessName"
+            name="businessName"
+            required
+          />
+          <mat-error *ngIf="formControl.invalid"
+            >{{getErrorMessage()}}</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="form">
+        <mat-form-field color="accent">
+          <input
+            matInput
+            #input
+            class="form-control"
+            placeholder="Dirección"
+            [(ngModel)]="provider.address"
+            name="address"
+            required
+          />
+          <mat-error *ngIf="formControl.invalid"
+            >{{getErrorMessage()}}</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div mat-dialog-actions>
+        <button
+          mat-button
+          [disabled]="!formControl.valid"
+          [mat-dialog-close]="1"
+          (click)="confirmAdd()"
+        >
+          {{provider.id ? 'Editar' : 'Guardar'}}
+        </button>
+        <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+      </div>
+    </form>
+  </div>
+</section>

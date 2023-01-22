@@ -1,0 +1,32 @@
+<section class="ctn-gapsi-square animated fadeInUp">
+  <section class="gapsi-square">
+      <nav>
+          <div>
+              {{dataApp?.name}}
+          </div> 
+          <div class="more">
+            <span class="material-icons">
+              more_vert
+              </span>
+          </div>  
+      </nav>
+
+      <section class="ctn-title">
+        <div class="ctn-img">
+          <img src="assets/imgs/logo.png" alt="" />
+        </div>
+      </section>
+
+      <div class="center">
+        <p class="welcome-text">Bienvenido candidato: {{dataApp?.creator}}</p>
+
+        <button class="gral-button" (click)="onClose.emit($event)">Continuar</button>
+      </div>
+
+      <section class="mrg">
+        <div class="version">
+          <p >Versión: {{dataApp?.version}}</p>
+        </div>
+      </section>
+  </section>
+</section>

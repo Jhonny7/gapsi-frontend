@@ -1,0 +1,159 @@
+.provider-page {
+  .table-data {
+    table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    table caption {
+      font-size: 1.5em;
+      margin: 0.5em 0 0.75em;
+    }
+
+    table tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: 0.35em;
+    }
+
+    table tr:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+
+    table th,
+    table td {
+      padding: 0.625em;
+      text-align: center;
+    }
+
+    table th {
+      font-size: 0.85em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .td-action {
+      width: 40px;
+      cursor: pointer;
+    }
+
+    .red{
+      color: #f73700;
+    }
+
+
+    .blue{
+      color: #0364c9;
+    }
+
+    @media screen and (max-width: 600px) {
+      .td-action {
+        width: auto;
+      }
+
+      table {
+        border: 0;
+      }
+
+      table caption {
+        font-size: 1.3em;
+      }
+
+      table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 0.625em;
+      }
+
+      table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: right;
+      }
+
+      table td::before {
+        /*
+              * aria-label has no advantage, it won't be read inside a table
+              content: attr(aria-label);
+              */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      table td:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.demo-toggles {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-toggles * {
+  margin-bottom: 16px;
+}
+
+.demo-options {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.demo-data * {
+  margin: 16px 0;
+}
+
+.demo-paginator {
+  width: 600px;
+}
+
+.plus {
+  background-color: #d0d0d0;
+  padding: 20px;
+  position: relative;
+  text-align: end;
+  height: 40px;
+  div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0364c9;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
+.paginater {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
