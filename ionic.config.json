@@ -1,0 +1,15 @@
+{
+  "defaultProject": "gapsiApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "projects": {
+    "gapsiApp": {
+      "name": "gapsiApp",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "angular"
+    }
+  }
+}

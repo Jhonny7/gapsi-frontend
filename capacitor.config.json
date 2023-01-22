@@ -1,0 +1,17 @@
+{
+  "appId": "mx.com.gapsi",
+  "appName": "Gapsi",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/gapsi-app",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "backgroundColor": "#FF000000",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "launchShowDuration": 2000
+    }
+  },
+  "cordova": {}
+}
